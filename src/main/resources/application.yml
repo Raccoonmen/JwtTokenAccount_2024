@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    generate-ddl: false
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?characterEncoding=UTF-8&serverTimezone=Asia/Seoul
+    username: test
+    password: test
+  jwt:
+    secret:  lsakjadkldnqiowjp2131p23j12p512oep122pop231pj1p2j2p31o3po12omd
