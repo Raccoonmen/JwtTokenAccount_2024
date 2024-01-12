@@ -19,13 +19,12 @@ public class JoinService {
 
         String username = joinDto.getUsername();
         String password= joinDto.getPassword();
-        System.out.println(username);
-        System.out.println(password);
+
+        System.out.println(username + "is request to join");
 
         Boolean isExist = userRepository.existsByUsername(username);
 
         if(isExist){
-
             return;
         }
 

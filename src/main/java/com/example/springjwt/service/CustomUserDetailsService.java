@@ -21,6 +21,8 @@ public class CustomUserDetailsService implements UserDetailsService {
         UserEntity userData = userRepository.findByUsername(username);
 
         if(userData != null){
+            System.out.println(username + "is present in Database");
+
             return new CustomUserDetails(userData);
         }
 

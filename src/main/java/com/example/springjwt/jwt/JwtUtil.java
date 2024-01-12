@@ -1,7 +1,6 @@
 package com.example.springjwt.jwt;
 
 import io.jsonwebtoken.Jwts;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -33,7 +32,7 @@ public class JwtUtil {
         return Jwts.parser().verifyWith(secretKey).build().parseSignedClaims(token).getPayload().getExpiration().before(new Date());
     }
 
-    public String createJwts(String username, String role, long expiredMs) {
+    public String createJwt(String username, String role, long expiredMs) {
 
         return Jwts.builder()
                 .claim("username", username)
